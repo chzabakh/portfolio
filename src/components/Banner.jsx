@@ -21,8 +21,21 @@ export const Banner = () => {
     const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
-        let updatedText = is Deleting ? fullText.subs
+        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+        setText(updatedText);
+        if (isDeleting) {
+            setDelta(prevDelta => prevDelta / 2)
+        }
+        if (!isDeleting && updatedText === fullText) {
+            setIsDeleting(true);
+            setDelta(periode);
+        } else if (isDeleting && updatedText == '') {
+            setIsDeleting(false);
+            setLoopNum(loopNum + 1);
+            setDelta(500);
+        }
     }
+    
     return (
         <section className="banner" id="home">
             <Container>
@@ -34,7 +47,7 @@ export const Banner = () => {
                         <button onClick={() => {console.log('connect')}}>Let's connect!<ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={} alt="Header Img" />
+                        <img src={''} alt="Header Img" />
                     </Col>
                 </Row>
             </Container>
