@@ -42,6 +42,7 @@ export const NavBar = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             
             <span className="navbar-text">
+              <button disabled className="vvd"><span>Let’s Connect</span></button>
               <div className="social-icon">
                 <a href="https://www.linkedin.com/in/charaf-eddine-zabakh-a52732130/" target="_blank"><img src={navIcon1} alt="in" /></a>
                 <a href="https://github.com/chzabakh" target="_blank"><img src={navIcon2} alt="git" /></a>
