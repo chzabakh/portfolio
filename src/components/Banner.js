@@ -11,8 +11,8 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "React Web Developer"];
-  const period = 2000;
+  const toRotate = [ "ReactJs Developer", "System Administrator"];
+  const period = 300;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -41,7 +41,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(80);
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
