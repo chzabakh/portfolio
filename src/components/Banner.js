@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/logo512.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -41,7 +41,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(80);
+      setDelta(100);
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
@@ -55,15 +55,14 @@ export const Banner = () => {
             <TrackVisibility>
               <div className="animate__animated animate__fadeIn">
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Charaf, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1 className="fix">{`Hi! I'm Charaf, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>As a versatile developer, administrator, and DevOps professional, I bring a broad range of technical expertise and experience to every project. With skills in C, ReactJS, Docker, Ansible, VirtualBox, Cisco, Windows, Linux, and IT maintenance and security, I have the knowledge and tools needed to deliver exceptional results. Whether building front-end applications or managing systems and networks, I am committed to optimizing performance, reliability, and security. So if you're looking for a developer and administrator who can streamline workflows, automate processes, and improve efficiency, look no further.</p>
               </div>
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-            <div className="animate__animated animate__zoomIn">
+            <div className="rotating-image">
                   <img src={headerImg} alt="Header Img"/>
             </div>
             </TrackVisibility>
